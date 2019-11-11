@@ -1,1 +1,9 @@
-
+XSS Exploit 
+For this vulnerability I chose a XSS exploit. First I made sure I was logged in as an admin
+Next I found a .jpg image and pasted it into the comment section behind a <img src= tag. 
+img src=”https://d1p2xdir0176pq.cloudfront.net/wp-content/uploads/RailCube.jpg”
+Next I added a cross site scripting exploit: "onmouseover=“alert(‘XSS’)”> tag at the end 
+<img src=”https://d1p2xdir0176pq.cloudfront.net/wp-content/uploads/RailCube.jpg” onmouseover = “alert(‘XSS’)”>
+The goal of this exploit was to be able to view and click on the image prompting an error message to pop up saying "XSS"
+However I ran into issues trying to get the image to load, and was therefore unable to test my work
+My theory is that I was running an updated version of WP and therfore the exploit was no longer vulnerable. 
