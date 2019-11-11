@@ -1,1 +1,10 @@
 # WP-v-Kali-
+This was a XSS comment exploit attempted in 4.2 
+Similar to a XSS jpg exploit I attempted, the purpose of this exploit was to trigger an "alert message"
+I logged in as an admin and created a new post
+Next I posted the XSS code in the comment box 
+<a href='/wp-admin/' title="" style="position:absolute;top:0;left:0;width:100%;height:100%;display:block;" onmouseover=alert(1)//'>Test</a>
+I posted it and viewed the post
+When a user hovers over the comment, it should trigger a message stating "alert 1"
+However just like my XSS jpg exploit, I was unsuccessful at triggering a response 
+I believe the vulnerability has been patched 
